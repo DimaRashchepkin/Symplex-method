@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35731.43 d17.13
+VisualStudioVersion = 17.13.35731.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symplex-method", "Symplex-method\Symplex-method.csproj", "{389E6A73-3BE9-4701-AB8D-E932B47A1CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{389E6A73-3BE9-4701-AB8D-E932B47A1CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{389E6A73-3BE9-4701-AB8D-E932B47A1CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{389E6A73-3BE9-4701-AB8D-E932B47A1CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
