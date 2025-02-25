@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symplex-method", "Symplex-m
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gauss", "..\Gauss\Gauss\Gauss.csproj", "{8BC15BCB-2D91-1588-5FE5-AB4081BCFCE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F8B014-D9D2-41BF-B6E5-67F0E1AAF442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC15BCB-2D91-1588-5FE5-AB4081BCFCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC15BCB-2D91-1588-5FE5-AB4081BCFCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC15BCB-2D91-1588-5FE5-AB4081BCFCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC15BCB-2D91-1588-5FE5-AB4081BCFCE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
