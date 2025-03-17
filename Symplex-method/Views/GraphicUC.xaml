@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Symplex_method.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="684" d:DesignWidth="1088">
+             d:DesignHeight="648" d:DesignWidth="1068">
     <Grid>
         <Label Content="Coming soon..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
 

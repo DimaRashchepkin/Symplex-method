@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Utils;
 
 namespace Symplex_method.Views
 {
@@ -20,6 +21,8 @@ namespace Symplex_method.Views
     /// </summary>
     public partial class GraphicUC : UserControl
     {
+        public Storage storage = new Storage();
+
         public GraphicUC()
         {
             InitializeComponent();

@@ -16,7 +16,7 @@ namespace Utils
 		private static StreamWriter writer;
 		public static int n, m;
 		public static double[] indexes;
-		public static double[,] matrix;
+		public static List<double[]> matrix;
 
 		public FileWR(Storage storage)
 		{
@@ -45,12 +45,14 @@ namespace Utils
 		public bool Write()
 		{
 			writer = new StreamWriter(Storage.FilePath);
+			n = Storage.StartTable.I;
+			m = Storage.StartTable.J;
 
-			try
+            try
 			{
 				writer.Write(Storage.StartTable.I);
 				writer.Write(" ");
-				writer.Write(Storage.StartTable.I);
+				writer.Write(Storage.StartTable.J);
 				writer.Write("\n");
 
 				for (int i = 0; i < m; i++)
@@ -60,11 +62,11 @@ namespace Utils
 				}
 				writer.Write("\n");
 
-				for (int i = 0; i < n; i++)
+				for (int i = 0; i < n - 1; i++)
 				{
-					for (int j = 0; j < m + 1; j++)
+					for (int j = 0; j < m; j++)
 					{
-						writer.Write(Storage.StartTable.Restrictions[i, j]);
+						writer.Write(Storage.StartTable.Restrictions[i][j]);
 						writer.Write(" ");
 					}
 					writer.Write("\n");
@@ -99,18 +101,19 @@ namespace Utils
                 throw new FormatException("Wrong format: wrong indexes");
             }
 
-            matrix = new double[n, m + 1];
-			for (int i = 0; i < n; i++)
+			matrix = new List<double[]>();
+			for (int i = 0; i < n - 1; i++)
 			{
                 buffer = GetDoubleLine(reader);
-                if (buffer.Length != m + 1)
+                if (buffer.Length != m)
                 {
                     throw new FormatException("Wrong indexes");
                 }
 
-                for (int j = 0; j < m + 1; j++)
+				matrix.Add(new double[m]);
+                for (int j = 0; j < m; j++)
 				{
-					matrix[i, j] = buffer[j];
+					matrix[i][j] = buffer[j];
 				}
 			}
 		}

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Utils;
 
 namespace Symplex_method.Views
 {
@@ -20,9 +21,32 @@ namespace Symplex_method.Views
     /// </summary>
     public partial class SymplexUC : UserControl
     {
+        public Storage storage = new Storage();
+
         public SymplexUC()
         {
             InitializeComponent();
+        }
+
+        public void ShowTable(StartTable table)
+        {
+            // for (int J = 1; J < table.J + 1; J++)
+            // {
+            // 	DataGridTextColumn column = new DataGridTextColumn();
+            // 	column.Header = "x" + J.ToString();
+            // 	ConditionsDataGrid.Columns.Add(column);
+            // 
+            // }
+
+            // restrictions.Clear();
+            // for (int I = 0; I < RestComboBox.SelectedIndex + 1; I++)
+            // {
+            //     restrictions.Add(new TableLine());
+            // }
+            // FunctionDataGrid.ItemsSource = lines;
+            // ConditionsDataGrid.ItemsSource = restrictions;
+
+            // ConditionsDataGrid;
         }
 
         private void SolveButton_Click(object sender, RoutedEventArgs e)

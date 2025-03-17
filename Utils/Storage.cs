@@ -8,8 +8,8 @@ namespace Utils
 {
     public class Storage
     {
-        public String FilePath { get; set; }
+        public String FilePath { get; set; } = "";
 
-        public StartTable StartTable { get; set; }
+        public StartTable StartTable { get; set; } = new StartTable();
     }
 }

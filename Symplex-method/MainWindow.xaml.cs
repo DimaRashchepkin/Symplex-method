@@ -23,18 +23,21 @@ namespace Symplex_method
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-        private Storage storage;
-        private FileWR fileWR;
-        private ConditionsUC conditionsUC = new ConditionsUC();
-        private SymplexUC symplexUC = new SymplexUC();
-        private GraphicUC graphicUC = new GraphicUC();
+        private readonly Storage storage;
+        private readonly FileWR fileWR;
+        private readonly ConditionsUC conditionsUC = new ConditionsUC();
+        private readonly SymplexUC symplexUC = new SymplexUC();
+        private readonly GraphicUC graphicUC = new GraphicUC();
 
         public MainWindow()
 		{
 			InitializeComponent();
-			ConditionsButton_Click(null, null);
             storage = new Storage();
             fileWR = new FileWR(storage);
+            conditionsUC.storage = storage;
+            symplexUC.storage = storage;
+            graphicUC.storage = storage;
+            ConditionsButton_Click(null, null);
         }
 
 		private void ConditionsButton_Click(object sender, RoutedEventArgs e)
@@ -44,6 +47,7 @@ namespace Symplex_method
 			GraphicButton.BorderBrush = SystemColors.InactiveBorderBrush;
 
             this.OutputView.Content = conditionsUC;
+            conditionsUC.ShowTable();
         }
 
 		private void SymplexMethodButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +57,7 @@ namespace Symplex_method
 			GraphicButton.BorderBrush = SystemColors.InactiveBorderBrush;
 
             this.OutputView.Content = symplexUC;
+            symplexUC.ShowTable(storage.StartTable);
         }
 
 		private void GraphicButton_Click(object sender, RoutedEventArgs e)
@@ -76,11 +81,11 @@ namespace Symplex_method
                 }
                 else
                 {
-                    conditionsUC.NewLabel.Content = "Error 0";
+                    conditionsUC.NewLabel.Content = "Loading error";
                     return;
                 }
 
-                conditionsUC.showTable(storage.StartTable);
+                conditionsUC.ShowTable();
             }
         }
 
@@ -92,11 +97,11 @@ namespace Symplex_method
                 storage.FilePath = saveFileDialog.FileName;
                 if (fileWR.Write() == true)
                 {
-                    conditionsUC.NewLabel.Content = "Saved";
+                    conditionsUC.NewLabel.Content = "File saved";
                 }
                 else
                 {
-                    conditionsUC.NewLabel.Content = "Error 1";
+                    conditionsUC.NewLabel.Content = "Saving error";
                     return;
                 }
             }
